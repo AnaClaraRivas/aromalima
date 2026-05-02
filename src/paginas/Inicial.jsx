@@ -22,8 +22,6 @@ export default function Inicial() {
             Confira nossos cafés
           </button>
         </div>
-
-        {/* ✅ usa a imagem importada */}
         <img src={cafeImg} alt="Café" />
       </section>
 

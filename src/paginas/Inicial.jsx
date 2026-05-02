@@ -2,8 +2,10 @@ import React from "react";
 import "../styles/global.css";
 import "../styles/inicial.css";
 
+import Navbar from "../componentes/navbar/Navbar";
 import CardBebida from "../componentes/CardBebida";
 
+import logo_clara from "../assets/img/logo/logo_clara.png";
 import cafeImg from "../assets/cafeinicial.png";
 import caramelo from "../assets/caramelogelado.png";
 import latte from "../assets/lattedourado.png";
@@ -12,6 +14,7 @@ import choco from "../assets/chocolima.png";
 export default function Inicial() {
   return (
     <div>
+      <Navbar/>
       <section className="capa">
         <div>
           <p className="sub">Desde 1984</p>

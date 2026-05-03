@@ -1,60 +1,215 @@
-/* capa */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
+  width: 100%;          
+  max-width: 1400px;     
+  margin: 0 auto;        
+  padding: 0 20px;   
+}
+
+/* CAPA  */
 .capa {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5%; /* 🔥 tira espaço lateral */
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .capa h1 {
   color: #54070C;
-  font-size: 48px;
+  font-size: 55px;
   margin: 10px 0;
+  line-height: 1.1; /* deixa mais juntinho */
+}
+
+.capa p {
+  font-size: 18px;
+
 }
 
 .capa img {
-  width: 55%;
+  width: 50%;
+  max-width: 500px; 
+  margin-left: auto; 
 }
 
-/* botão */
 .botao-padrao {
-  background: white;              
-  color: #54070C;                 
-  border: 2px solid #54070C;      
+  background: white;
+  color: #54070C;
+  border: 2px solid #54070C;
 
   padding: 14px 28px;
   border-radius: 30px;
   margin-top: 20px;
 
   cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
-
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .botao-padrao:hover {
-  background: #54070C;           
-  color: white;                  
+  background: #54070C;
+  color: white;
 }
 
-/* bebidas */
+/* BEBIDAS */
 .bebidas {
   background: #54070C;
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 140px auto;
+  padding: 100px 40px 50px;
   display: flex;
-  justify-content: space-around;
-  padding: 30px;
-  color: white;
-  margin: 40px auto;       
-  max-width: 85%;       
-  border-radius: 20px;    
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
 }
 
 .card-bebida {
-  text-align: center;}
-
-.card-bebida img {
-  width: 55%;
-    margin: 40px auto;       
+  width: 300px;
+  position: relative;
+  text-align: center;
 }
 
+/* circulo  */
+.img-container {
+  width: 250px;
+  height: 250px;
+  background: #e8d5c0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -170px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.card-bebida img {
+  width: 170%;
+  max-width: none;
+  object-fit: contain;
+  transform: translateY(-30px);
+}
+
+.badge {
+  position: absolute;
+  bottom: -10px;
+  background: white;
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nome-bebida {
+  margin-top: 100px;
+  color: white;
+  font-size: 16px;
+}
+
+.texto-final {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.estrela {
+  color: gold;
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+
+/* WORKSHOPS */
+
+.workshop-conteudo {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.imgwork .imgworkprincipal {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.workshop-texto h2 {
+  font-size: 45px;
+  color: #54070C;
+  margin-bottom: 10px;
+}
+
+.workshop-texto p {
+  font-size: 20px;
+}
+
+.link-cursos {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .capa {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .capa img {
+    order: -1;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto 20px;
+  }
+  .capa h1 {
+    font-size: 32px;
+  }
+
+  .bebidas {
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    padding: 100px 20px 60px;
+  }
+
+  .card-bebida {
+    width: 220px;
+  }
+
+  .img-container {
+    width: 180px;
+    height: 180px;
+    top: -10px;
+    z-index: 1;
+  }
+  .card-bebida img {
+    width: 150%;
+    transform: translateY(-20px);
+  }
+  .nome-bebida {
+    margin-top: 190px;
+    color: aliceblue;
+    position: relative;
+    z-index: 2;
+  }
+
+  .texto-final {
+    position: relative;
+    margin-top: 30px;
+  }
+}

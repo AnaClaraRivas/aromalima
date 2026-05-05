@@ -1,0 +1,94 @@
+.sobre-page {
+  width: 100%;
+}
+
+.sobre-hero {
+  background-color: #54070C; 
+  color: white;
+  padding: 80px 20px 150px 20px; 
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.sobre-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.desde {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.sobre-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.descricao {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* grid de Imagens */
+.sobre-images-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1100px;
+  position: absolute;
+  bottom: -300px;
+  z-index: 5;
+}
+
+.image-card {
+  flex: 1;
+  height: 350px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-footer-space {
+  height: 200px;
+  background-color: #ffffff; 
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .sobre-content h1 {
+    font-size: 40px;
+  }
+  
+  .deco-left, .deco-right {
+    display: none; 
+  }
+
+  .sobre-images-grid {
+    flex-direction: column;
+    position: relative;
+    bottom: -50px;
+    padding: 0 20px;
+  }
+
+  .image-card {
+    height: 250px;
+  }
+}

@@ -4,6 +4,8 @@ import "../styles/inicial.css";
 
 import Navbar from "../componentes/navbar/Navbar";
 import CardBebida from "../componentes/CardBebida";
+import Footer from "../componentes/footer/Footer";
+
 
 import logo_clara from "../assets/img/logo/logo_clara.png";
 import cafeImg from "../assets/cafeinicial.png";
@@ -64,6 +66,8 @@ export default function Inicial() {
 
         </div>
       </section>
+
+      <Footer />
 
     </div>
   );

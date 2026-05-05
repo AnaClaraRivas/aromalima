@@ -4,6 +4,7 @@ import Login from "./paginas/Login";
 import Cadastro from "./paginas/Cadastro";
 import Esqueceu from "./paginas/Esqueceu";
 import Redefinir from "./paginas/Redefinir";
+import Sobre from "./paginas/Sobre";
 import Navbar from "./componentes/navbar/Navbar";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/esqueceu" element={<Esqueceu />} />
         <Route path="/redefinir" element={<Redefinir />} />
+        <Route path="/sobre" element={<Sobre />} />
       </Routes>
     </BrowserRouter>
   );

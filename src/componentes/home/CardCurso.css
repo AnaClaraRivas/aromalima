@@ -1,0 +1,71 @@
+.card-curso-container {
+  width: 400px; 
+  border-radius: 20px; 
+  background-color: #ffffff;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: sans-serif;
+}
+
+.card-curso-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-curso-imagem {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-curso-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-curso-botao {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+}
+
+.card-curso-titulo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 70%;
+}
+
+.curso-botao {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #54070C; 
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.card-curso-icone {
+  width: 24px;
+  height: 24px;
+  color: #54070C;
+}
+
+.card-curso-container:hover .curso-botao {
+  background-color: #54070C;
+}
+
+.card-curso-container:hover .card-curso-icone {
+  color: #ffffff;
+}

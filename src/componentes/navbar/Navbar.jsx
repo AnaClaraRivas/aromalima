@@ -45,19 +45,16 @@ export default function Navbar() {
         <li>Contato</li>
       </ul>
 
-      {/* Lado Direito: Ícones e Toggle */}
+      {/* lado direito */}
       <div className="right-side">
-        {/* Ícone de Sacola (Visível em todos os modos ou ajuste se preferir) */}
         <ShoppingBag size={22} className="icon-item" />
-
-        {/* Ícone de Usuário (Visível em todos os modos, redireciona para login) */}
         <User 
           size={22} 
           className="icon-item" 
           onClick={() => navigate("/login")} 
         />
 
-        {/* Botão Hambúrguer (Aparece apenas no mobile via CSS) */}
+        {/* botão hamburguer  */}
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </div>

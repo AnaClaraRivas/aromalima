@@ -109,11 +109,11 @@
   color: #6b2c2c;
 }
 
-/* Lado Direito */
+/* lado direito */
 .right-side {
   display: flex;
   align-items: center;
-  gap: 15px; /* Espaçamento entre ícones e o hamburguer */
+  gap: 15px; 
 }
 
 .icon-item {
@@ -128,7 +128,7 @@
 
 /* hamburguer */
 .menu-toggle {
-  display: none; /* Escondido no desktop */
+  display: none;
   cursor: pointer;
   color: #333;
 }
@@ -167,7 +167,7 @@
     display: block;
   }
 
-  /* Ajuste ícones no mobile */
+  /* ícones no mobile */
   .icon-item {
     width: 22px;
     height: 22px;

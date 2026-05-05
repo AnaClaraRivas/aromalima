@@ -1,14 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/global.css";
-import "../styles/login.css";
-import { Mail, Lock } from "lucide-react";
-import cafe from "../assets/img/img_login.png";
+import "../styles/cadastro.css";
+import { Mail, Lock, User } from "lucide-react";
 import cafeCadastro from "../assets/img/img_cadastro.png";
 import googleIcon from "../assets/img/icon_google.png";
 
-export default function Login() {
-  const navigate = useNavigate();
+export default function Cadastro() {
+    const navigate = useNavigate();
   return (
     <div className="login-container">
 
@@ -17,7 +16,14 @@ export default function Login() {
 
         <div className="form-box">
 
-          <h1>Faça seu login!</h1>
+          <h1>Faça seu cadastro!</h1>
+
+          {/* nome */}
+          <label>
+            <User size={18} className="input-icon" />
+            Nome completo
+          </label>
+          <input type="email" placeholder="Seu nome completo" />
 
           {/* email */}
           <label>
@@ -33,28 +39,20 @@ export default function Login() {
           </label>
           <input type="password" placeholder="Sua senha" />
 
-          {/* esqueceu senha */}
-          <span 
-            className="forgot" 
-            onClick={() => navigate("/esqueceu")}
-          >
-            Esqueceu a senha?
-          </span>
-
           {/* google */}
           <button className="google-btn">
             <img src={googleIcon} alt="Google" />
             Entrar com o Google
           </button>
 
-          {/* login */}
-          <button className="login-btn" onClick={() => navigate("/")}>
-            Entrar
+          {/* btn criar */}
+          <button className="login-btn" onClick={() => navigate("/login")}>
+            Criar conta
           </button>
 
-          {/* cadastro */}
-          <button className="secondary-btn" onClick={() => navigate("/cadastro")}>
-            Criar nova conta
+          {/* login */}
+          <button className="secondary-btn" onClick={() => navigate("/login")}>
+            Já tem uma conta? Faça seu login
           </button>
 
         </div>

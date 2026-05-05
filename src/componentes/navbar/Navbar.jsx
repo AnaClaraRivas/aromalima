@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+// rotas
+import { useNavigate } from "react-router-dom";
 import { ShoppingBag, User, Menu, X, ChevronDown } from "lucide-react";
 import "./Navbar.css";
 import logo from "../../assets/img/logo/logo_clara.png";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -49,8 +52,9 @@ export default function Navbar() {
       {/* ícones */}
       <div className="icones">
         <ShoppingBag size={20} />
-        <User size={20} />
+        <User size={20} onClick={() => navigate("/login")} />
       </div>
+
 
       {/* botão hamburguer */}
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>

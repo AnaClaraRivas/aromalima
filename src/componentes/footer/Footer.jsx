@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./footer.css";
 import logo from "../../assets/img/logo/logo_escura.png"; 
 
 export default function Footer() {

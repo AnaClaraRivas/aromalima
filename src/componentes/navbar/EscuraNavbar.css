@@ -11,13 +11,18 @@
 /* navbar */
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; 
+  justify-content: space-between; 
   padding: 15px 40px;
-  background-color: #54070C;
   position: relative;
   z-index: 100;
+  width: 100%;
 }
+
+.navbar.escura {
+  background-color: #54070C; 
+}
+
 
 /* logo */
 .logo img {

@@ -9,7 +9,7 @@
 }
 
 /* navbar */
-.navbar {
+.navbar.clara {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,21 +31,22 @@
   gap: 30px;
   list-style: none;
 }
-
-.menu li {
+.navbar.clara .menu li {
   cursor: pointer;
   font-size: 16px;
-  color: #333;
+  color: #333333; 
   position: relative;
   transition: 0.2s;
 }
 
-.menu li:hover {
+
+.navbar.clara .menu li:hover {
   color: #6b2c2c;
   font-weight: 500;
 }
 
-.menu li.active::after {
+
+.navbar.clara .menu li.active::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -116,18 +117,18 @@
   gap: 15px; 
 }
 
-.icon-item {
+.navbar.clara .icon-item {
   cursor: pointer;
   transition: 0.2s;
   color: #333;
 }
 
-.icon-item:hover {
+.navbar.clara .icon-item:hover {
   color: #6b2c2c;
 }
 
 /* hamburguer */
-.menu-toggle {
+.navbar.clara .menu-toggle {
   display: none;
   cursor: pointer;
   color: #333;
@@ -163,7 +164,7 @@
     padding: 30px 20px;
   }
 
-  .menu-toggle {
+  .navbar.clara .menu-toggle {
     display: block;
   }
 

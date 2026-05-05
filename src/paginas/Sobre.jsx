@@ -2,7 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/global.css";
 import "../styles/sobre.css";
-import NavbarEscura from "../componentes/navbar/NavbarEscura";
+import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
+import Footer from "../componentes/footer/Footer";
 import imgSobre1 from "../assets/img/img_sobre1.png";
 import imgSobre2 from "../assets/img/img_sobre2.png";
 
@@ -11,7 +12,7 @@ export default function Sobre() {
 
   return (
     <div className="sobre-page">
-      <NavbarEscura />
+      <EscuraNavbar />
 
       <section className="sobre-hero">
 
@@ -33,8 +34,10 @@ export default function Sobre() {
           </div>
         </div>
       </section>
-      
-      <section className="sobre-footer-space"></section>
+
+      <section className="sobre-footer-space">
+        <Footer/>
+      </section>
     </div>
   );
 }

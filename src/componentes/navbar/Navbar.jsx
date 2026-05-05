@@ -10,7 +10,7 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar clara">
       {/* logo */}
       <div className="logo">
         <img src={logo} alt="Logo" />

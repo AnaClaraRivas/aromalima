@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 .sobre-page {
   width: 100%;
+  overflow-x: hidden; /* Evita scrolls horizontais indesejados */
 }
 
+/* SEÇÃO HERO (VINHO) */
 .sobre-hero {
-  background-color: #54070C; 
+  background-color: #54070C; /* Cor exata da sua marca */
   color: white;
-  padding: 80px 20px 150px 20px; 
+  padding: 80px 20px 250px 20px; /* Aumentado para dar espaço às imagens sobrepostas */
   text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .sobre-content {
   max-width: 800px;
@@ -39,16 +42,15 @@
   margin: 0 auto;
 }
 
-/* grid de Imagens */
+/* GRID DE IMAGENS SOBREPOSTAS */
 .sobre-images-grid {
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-top: 60px;
   width: 100%;
   max-width: 1100px;
   position: absolute;
-  bottom: -300px;
+  bottom: -150px; /* Posiciona as fotos entre a seção vinho e a clara */
   z-index: 5;
 }
 
@@ -66,29 +68,112 @@
   object-fit: cover;
 }
 
-.sobre-footer-space {
-  height: 200px;
-  background-color: #ffffff; 
+/* SEÇÃO DE DETALHES (TEXTOS E CONTEÚDO BRANCO) */
+.sobre-detalhes {
+  background-color: #ffffff;
+  padding: 250px 40px 80px 40px; /* Espaçamento superior alto devido ao grid absoluto */
+  display: flex;
+  justify-content: center;
 }
 
-/* responsividade */
+.container-textos {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.texto-box {
+  margin-bottom: 80px;
+}
+
+.texto-box h2 {
+  color: #3F0509;
+  font-size: 36px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.texto-box p {
+  color: #333333;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* Layout lado a lado para "Como Surgimos" */
+.texto-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* Layout para o Diferencial com a imagem do copo */
+.diferencial-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.diferencial-texto {
+  flex: 1;
+}
+
+.diferencial-texto p {
+  margin-bottom: 20px;
+}
+
+.diferencial-imagem {
+  flex-shrink: 0;
+}
+
+.diferencial-imagem img {
+  width: 400px; /* Tamanho proporcional ao seu design */
+  height: auto;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .diferencial-imagem img {
+    width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
+  .sobre-hero {
+    padding-bottom: 100px;
+  }
+
   .sobre-content h1 {
     font-size: 40px;
   }
-  
-  .deco-left, .deco-right {
-    display: none; 
-  }
 
   .sobre-images-grid {
-    flex-direction: column;
     position: relative;
     bottom: -50px;
+    flex-direction: column;
     padding: 0 20px;
+    margin-top: 40px;
   }
 
   .image-card {
     height: 250px;
+  }
+
+  .sobre-detalhes {
+    padding-top: 100px;
+  }
+
+  .texto-flex {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .diferencial-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .diferencial-imagem img {
+    width: 100%;
+    max-width: 300px;
   }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// rotas
 import { useNavigate } from "react-router-dom";
 import { ShoppingBag, User, Menu, X, ChevronDown } from "lucide-react";
 import "./Navbar.css";
@@ -12,7 +11,6 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-
       {/* logo */}
       <div className="logo">
         <img src={logo} alt="Logo" />
@@ -20,15 +18,13 @@ export default function Navbar() {
 
       {/* menu */}
       <ul className={`menu ${menuOpen ? "active" : ""}`}>
-        <li className="active">Home</li>
+        <li className="active" onClick={() => navigate("/")}>Home</li>
         <li>Sobre</li>
         <li>Loja</li>
         <li>Assinaturas</li>
 
         {/* dropdown */}
         <li className="dropdown">
-
-          {/* header clicável no mobile */}
           <div 
             className="dropdown-header"
             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -49,16 +45,22 @@ export default function Navbar() {
         <li>Contato</li>
       </ul>
 
-      {/* ícones */}
-      <div className="icones">
-        <ShoppingBag size={20} />
-        <User size={20} onClick={() => navigate("/login")} />
-      </div>
+      {/* Lado Direito: Ícones e Toggle */}
+      <div className="right-side">
+        {/* Ícone de Sacola (Visível em todos os modos ou ajuste se preferir) */}
+        <ShoppingBag size={22} className="icon-item" />
 
+        {/* Ícone de Usuário (Visível em todos os modos, redireciona para login) */}
+        <User 
+          size={22} 
+          className="icon-item" 
+          onClick={() => navigate("/login")} 
+        />
 
-      {/* botão hamburguer */}
-      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <X size={26} /> : <Menu size={26} />}
+        {/* Botão Hambúrguer (Aparece apenas no mobile via CSS) */}
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </div>
       </div>
     </nav>
   );

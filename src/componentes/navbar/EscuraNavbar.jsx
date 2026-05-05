@@ -20,7 +20,7 @@ export default function NavbarEscura() {
       <ul className={`menu ${menuOpen ? "active" : ""}`}>
         <li className="active" onClick={() => navigate("/")}>Home</li>
         <li onClick={() => navigate("/sobre")}>Sobre</li>
-        <li>Loja</li>
+        <li onClick={() => navigate("/loja")}>Loja</li>
         <li>Assinaturas</li>
 
         {/* dropdown */}

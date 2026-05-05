@@ -2,14 +2,14 @@
 
 .sobre-page {
   width: 100%;
-  overflow-x: hidden; /* Evita scrolls horizontais indesejados */
+  overflow-x: hidden; 
 }
 
-/* SEÇÃO HERO (VINHO) */
+/* parte vinho */
 .sobre-hero {
-  background-color: #54070C; /* Cor exata da sua marca */
+  background-color: #54070C; 
   color: white;
-  padding: 80px 20px 250px 20px; /* Aumentado para dar espaço às imagens sobrepostas */
+  padding: 80px 20px 250px 20px; 
   text-align: center;
   position: relative;
   display: flex;
@@ -42,7 +42,7 @@
   margin: 0 auto;
 }
 
-/* GRID DE IMAGENS SOBREPOSTAS */
+/* grid imagens */
 .sobre-images-grid {
   display: flex;
   gap: 30px;
@@ -50,7 +50,7 @@
   width: 100%;
   max-width: 1100px;
   position: absolute;
-  bottom: -150px; /* Posiciona as fotos entre a seção vinho e a clara */
+  bottom: -150px; 
   z-index: 5;
 }
 
@@ -68,10 +68,10 @@
   object-fit: cover;
 }
 
-/* SEÇÃO DE DETALHES (TEXTOS E CONTEÚDO BRANCO) */
+/* conteudo */
 .sobre-detalhes {
   background-color: #ffffff;
-  padding: 250px 40px 80px 40px; /* Espaçamento superior alto devido ao grid absoluto */
+  padding: 250px 40px 80px 40px; 
   display: flex;
   justify-content: center;
 }
@@ -98,14 +98,13 @@
   font-size: 17px;
 }
 
-/* Layout lado a lado para "Como Surgimos" */
 .texto-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
 
-/* Layout para o Diferencial com a imagem do copo */
+
 .diferencial-content {
   display: flex;
   align-items: center;
@@ -125,12 +124,12 @@
 }
 
 .diferencial-imagem img {
-  width: 400px; /* Tamanho proporcional ao seu design */
+  width: 400px; 
   height: auto;
   filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
 }
 
-/* RESPONSIVIDADE */
+/* responsividade */
 @media (max-width: 1024px) {
   .diferencial-imagem img {
     width: 300px;

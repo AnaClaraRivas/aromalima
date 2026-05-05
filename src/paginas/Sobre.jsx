@@ -4,7 +4,6 @@ import "../styles/sobre.css";
 import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
 
-// Importações das imagens
 import imgSobre1 from "../assets/img/img_sobre1.png";
 import imgSobre2 from "../assets/img/img_sobre2.png";
 import imgSobre3 from "../assets/img/img_sobre3.png"; 
@@ -14,7 +13,7 @@ export default function Sobre() {
     <div className="sobre-page">
       <EscuraNavbar />
 
-      {/* SEÇÃO HERO (VINHO) */}
+      {/* parte vinho */}
       <section className="sobre-hero">
         <div className="sobre-content">
           <p className="desde">Desde 1984</p>
@@ -35,7 +34,7 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* SEÇÃO CONTEÚDO (TEXTOS) */}
+      {/* conteudo */}
       <section className="sobre-detalhes">
         <div className="container-textos">
           

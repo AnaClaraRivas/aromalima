@@ -1,0 +1,104 @@
+.container-destaques {
+  position: relative;
+  padding: 60px 40px;
+  font-family: 'Poppins', sans-serif; 
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.graos-decorativos {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 150px;
+  height: auto;
+}
+
+.titulo-secao {
+  color: #4a0e0e !important; 
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.grid-produtos {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card-produto {
+  border-radius: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; 
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+  height: 300px; 
+}
+
+.card-produto.vinho {
+  background-color: #4c0d0d; 
+  color: #ffffff;
+}
+
+.card-produto.bege {
+  background-color: #c9b088; 
+  color: #ffffff;
+}
+
+.container-imagem {
+  position: absolute;
+  top: -40px; 
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-imagem img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.info-produto {
+  text-align: center;
+  width: 100%;
+}
+
+.info-produto h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info-produto .preco {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.btn-ver-produto {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.btn-ver-produto:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

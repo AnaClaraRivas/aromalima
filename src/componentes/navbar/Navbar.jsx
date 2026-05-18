@@ -25,19 +25,21 @@ export default function Navbar() {
 
         {/* dropdown */}
         <li className="dropdown">
-          <div 
+          <div
             className="dropdown-header"
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
             Conteúdos
-            <ChevronDown 
-              size={18} 
-              className={`arrow ${dropdownOpen ? "open" : ""}`} 
+            <ChevronDown
+              size={18}
+              className={`arrow ${dropdownOpen ? "open" : ""}`}
             />
           </div>
 
           <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-            <p>Blog</p>
+            <p onClick={() => navigate("/blog")}>
+              Blog
+            </p>            
             <p>Cursos e workshops</p>
           </div>
         </li>
@@ -48,10 +50,10 @@ export default function Navbar() {
       {/* lado direito */}
       <div className="right-side">
         <ShoppingBag size={22} className="icon-item" />
-        <User 
-          size={22} 
-          className="icon-item" 
-          onClick={() => navigate("/login")} 
+        <User
+          size={22}
+          className="icon-item"
+          onClick={() => navigate("/login")}
         />
 
         {/* botão hamburguer  */}

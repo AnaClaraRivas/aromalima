@@ -1,13 +1,15 @@
 import React from "react";
 import "../styles/global.css";
 import "../styles/inicial.css";
+import "../styles/DestaquesLoja.css";
+
 
 import Navbar from "../componentes/navbar/Navbar";
 import CardBebida from "../componentes/home/CardBebida";
 import CardCurso from "../componentes/home/CardCurso";
 import CardAssinatura from "../componentes/home/CardAssinatura";
+import DestaquesLoja from "../componentes/home/DestaquesLoja"; // <-- Importado aqui
 import Footer from "../componentes/footer/Footer";
-
 
 import logo_clara from "../assets/img/logo/logo_clara.png";
 import cafeImg from "../assets/cafeinicial.png";
@@ -17,7 +19,6 @@ import choco from "../assets/chocolima.png";
 import preparo from "../assets/preparo.png";
 import barista from "../assets/barista.png";
 import iconecafe from "../assets/iconecafe.png";
-
 
 export default function Inicial() {
   return (
@@ -82,7 +83,6 @@ export default function Inicial() {
         <div className="assinatura-container">
           <div className="assinatura-cabecalho">
             <div className="assinatura-icones">
-              {/* Aqui você pode colocar a imagem das 3 xícaras do design */}
               <img className="imgiconecafe" src={iconecafe} alt="Ícones de café" />
             </div>
             <div className="assinatura-texto">
@@ -106,6 +106,10 @@ export default function Inicial() {
           </div>
         </div>
       </section>
+
+      {/* DESTAQUES DA LOJA */}
+      <DestaquesLoja />
+
       <Footer />
     </div>
   );

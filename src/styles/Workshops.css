@@ -1,0 +1,402 @@
+/* ========================= */
+/* GERAL */
+/* ========================= */
+
+.cursos-container {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ========================= */
+/* SEÇÃO CURSOS */
+/* ========================= */
+
+.section-cursos {
+    padding: 110px 20px 90px;
+    text-align: center;
+    position: relative;
+}
+
+.titulocursos {
+    color: #54070C;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.coisinhosdecorativos {
+    width: 180px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.conteudoinicial {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitulo {
+    color: #54070C;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.descricaoo {
+    color: #666;
+    max-width: 760px;
+    margin: 0 auto 55px;
+    line-height: 1.9;
+    font-size: 1.02rem;
+    text-align: center;
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    justify-items: center;
+}
+
+/* ========================= */
+/* SEÇÃO WORKSHOP */
+/* ========================= */
+
+.workshopss {
+    background-color: #54070C;
+    padding: 100px 20px;
+    border-radius: 60px 60px 0 0;
+    margin-top: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.workshopss::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 50%;
+    top: -180px;
+    left: -120px;
+}
+
+.light {
+    color: white !important;
+}
+
+/* ========================= */
+/* BLOG */
+/* ========================= */
+
+.blog {
+    padding: 120px 20px;
+    position: relative;
+}
+
+.blog::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, transparent, rgba(84, 7, 12, 0.06));
+    pointer-events: none;
+}
+
+.blog-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background: linear-gradient(135deg, #ffffff, #faf7f7);
+
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 70px;
+
+    border: 1px solid #eadede;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.05),
+        0 5px 15px rgba(84, 7, 12, 0.05);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-blogs {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.texto-blogs h2 {
+    color: #54070C;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.texto-blogs p {
+    color: #666;
+    line-height: 1.9;
+    font-size: 1rem;
+    max-width: 500px;
+}
+
+/* botão */
+
+.btn-blog {
+    margin-top: 35px;
+
+    padding: 15px 40px;
+
+    background-color: #54070C;
+    color: white;
+
+    border: none;
+    border-radius: 40px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 10px 20px rgba(84, 7, 12, 0.18);
+}
+
+.btn-blog:hover {
+    background-color: #6b1017;
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* imagem */
+
+.img-blogs {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.img-blogs img {
+    width: 100%;
+    max-width: 430px;
+
+    border-radius: 35px;
+
+    object-fit: cover;
+}
+
+/* ========================= */
+/* WORKSHOP CARD */
+/* ========================= */
+
+.workshop-card {
+    background-color: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.35s ease;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.workshop-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.workshop-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.workshop-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.workshop-card:hover img {
+    transform: scale(1.05);
+}
+
+.workshop-content {
+    padding: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 140px;
+}
+
+.workshop-info {
+    flex: 1;
+}
+
+.workshop-info h3 {
+    color: #222;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.workshop-info p {
+    color: #666;
+    font-size: 0.92rem;
+    margin: 5px 0;
+}
+
+/* BOTÃO SETA */
+
+.workshop-btn {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+    min-height: 48px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background-color: #54070C;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 8px 18px rgba(84, 7, 12, 0.2);
+}
+
+.workshop-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.workshop-btn:hover {
+    transform: scale(1.08);
+    background-color: #6b1017;
+}
+
+/* MINI INFO BLOG */
+
+.mini-info-blog {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.mini-info-blog span {
+    background-color: rgba(84, 7, 12, 0.08);
+    color: #54070C;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .blog-conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .texto-blogs p {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-cursos,
+    .workshopss,
+    .blog {
+        padding: 80px 20px;
+    }
+
+    .titulocursos {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo {
+        font-size: 1.9rem;
+    }
+
+    .blog-conteudo {
+        padding: 40px 25px;
+        border-radius: 28px;
+    }
+
+    .texto-blogs h2 {
+        font-size: 2.2rem;
+    }
+
+    .coisinhosdecorativos {
+        width: 130px;
+    }
+
+    .workshopss {
+        border-radius: 40px 40px 0 0;
+    }
+
+    .img-blogs img {
+        max-width: 100%;
+    }
+
+    .workshop-content {
+        min-height: auto;
+    }
+}

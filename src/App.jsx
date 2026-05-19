@@ -6,7 +6,10 @@ import Esqueceu from "./paginas/Esqueceu";
 import Redefinir from "./paginas/Redefinir";
 import Sobre from "./paginas/Sobre";
 import Loja from "./paginas/Loja";
-import Blog from "./paginas/Blog"; 
+import Blog from "./paginas/Blog";
+import Cursos from "./paginas/Workshops";
+import Assinaturas from "./paginas/Assinaturas";
+import BlogLeitura from "./paginas/LeituraBlog";
 import Navbar from "./componentes/navbar/Navbar";
 
 function App() {
@@ -20,7 +23,11 @@ function App() {
         <Route path="/redefinir" element={<Redefinir />} />
         <Route path="/loja" element={<Loja />} />
         <Route path="/sobre" element={<Sobre />} />
-        <Route path="/blog" element={<Blog />} /> 
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/assinaturas" element={<Assinaturas />} />
+        <Route path="/blogleitura" element={<BlogLeitura />} />
+
       </Routes>
     </BrowserRouter>
   );

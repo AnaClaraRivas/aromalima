@@ -38,7 +38,7 @@ export default function DestaquesLoja() {
         className="graos-decorativos" 
       />
 
-      <h2 className="titulo-secao">
+      <h2 className="titulo-secao-loja">
         Confira os destaques da nossa loja!
       </h2>
 

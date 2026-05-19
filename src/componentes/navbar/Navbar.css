@@ -9,19 +9,23 @@
 }
 
 /* navbar */
-.navbar.clara {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
-  background-color: #f5f5f5;
   position: relative;
   z-index: 100;
+  width: 100%;
+}
+
+.navbar.clara {
+  background-color: #f5f5f5;
 }
 
 /* logo */
 .logo img {
-  width: 100px;
+  width: 70px;
   display: block;
 }
 
@@ -31,20 +35,19 @@
   gap: 30px;
   list-style: none;
 }
+
 .navbar.clara .menu li {
   cursor: pointer;
   font-size: 16px;
-  color: #333333; 
+  color: #333333;
   position: relative;
   transition: 0.2s;
 }
-
 
 .navbar.clara .menu li:hover {
   color: #6b2c2c;
   font-weight: 500;
 }
-
 
 .navbar.clara .menu li.active::after {
   content: "";
@@ -114,13 +117,13 @@
 .right-side {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .navbar.clara .icon-item {
   cursor: pointer;
   transition: 0.2s;
-  color: #333;
+  color: #333333;
 }
 
 .navbar.clara .icon-item:hover {
@@ -131,18 +134,19 @@
 .navbar.clara .menu-toggle {
   display: none;
   cursor: pointer;
-  color: #333;
+  color: #333333;
 }
 
 /* responsivo */
 @media (max-width: 768px) {
+
   .navbar {
     padding: 15px 20px;
   }
 
   .menu {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     width: 100%;
     background: white;
@@ -180,12 +184,12 @@
   }
 
   .dropdown-menu {
-    position: static; 
-    background: #fafafa; 
+    position: static;
+    background: #fafafa;
     box-shadow: none;
     padding: 0;
     width: 100%;
-    max-height: 0; 
+    max-height: 0;
     overflow: hidden;
     opacity: 1;
     visibility: visible;
@@ -201,5 +205,13 @@
 
   .dropdown-menu p {
     text-align: center;
+  }
+
+  .navbar.clara .menu li {
+    color: #333333;
+  }
+
+  .navbar.clara .menu li:hover {
+    color: #6b2c2c;
   }
 }

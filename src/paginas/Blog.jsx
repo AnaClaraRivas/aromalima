@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "../styles/global.css";
 import "../styles/blog.css";
 
@@ -55,6 +57,8 @@ const postsPaises = [
 ];
 
 export default function Blog() {
+  const navigate = useNavigate();
+
   return (
     <div className="pagina-blog">
       <NavbarEscura />
@@ -84,7 +88,10 @@ export default function Blog() {
 
                 <p>{post.descricao}</p>
 
-                <button className="botao-ver-conteudo">
+                <button
+                  className="botao-ver-conteudo"
+                  onClick={() => navigate("/blogleitura")}
+                >
                   Ver conteúdo <span>➔</span>
                 </button>
               </div>
@@ -97,7 +104,7 @@ export default function Blog() {
         </section>
 
         <section className="secao-cafe-mundo">
-          <div className="titulo-secao">
+          <div className="titulo-secaoo">
             <h2>CAFÉ AO REDOR DO MUNDO</h2>
           </div>
 
@@ -110,7 +117,10 @@ export default function Blog() {
 
                 <h3>{pais.titulo}</h3>
 
-                <button className="botao-ver-conteudo">
+                <button
+                  className="botao-ver-conteudo"
+                  onClick={() => navigate("/blogleitura")}
+                >
                   Ver conteúdo <span>➔</span>
                 </button>
               </div>

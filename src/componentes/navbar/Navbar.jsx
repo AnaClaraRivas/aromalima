@@ -21,7 +21,7 @@ export default function Navbar() {
         <li className="active" onClick={() => navigate("/")}>Home</li>
         <li onClick={() => navigate("/sobre")}>Sobre</li>
         <li onClick={() => navigate("/loja")}>Loja</li>
-        <li>Assinaturas</li>
+        <li onClick={() => navigate("/assinaturas")}>Assinaturas</li>
 
         {/* dropdown */}
         <li className="dropdown">
@@ -39,8 +39,10 @@ export default function Navbar() {
           <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
             <p onClick={() => navigate("/blog")}>
               Blog
-            </p>            
-            <p>Cursos e workshops</p>
+            </p>
+            <p onClick={() => navigate("/cursos")}>
+              Cursos e workshops
+            </p>
           </div>
         </li>
 

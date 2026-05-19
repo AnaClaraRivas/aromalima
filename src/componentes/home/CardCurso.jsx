@@ -1,5 +1,5 @@
 import React from 'react';
-import './CardCurso.css'; // Importando o arquivo que vamos criar abaixo
+import './CardCurso.css'; 
 
 const CardCurso = ({ imagem, titulo, aoClicar }) => {
   return (

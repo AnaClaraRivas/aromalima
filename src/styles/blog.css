@@ -8,7 +8,7 @@
 .cabecalho-blog {
   background-color: #54070c;
   color: #ffffff;
-  padding: 80px 20px;
+  padding: 80px 20px 120px 20px;
   text-align: center;
   position: relative;
   border-bottom-left-radius: 40px;
@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #c9b088;
+  border: 2px solid rgba(84, 7, 12, 0.08);
   border-radius: 20px;
   padding: 30px 40px;
   background-color: #ffffff;
@@ -134,7 +134,7 @@
   margin-top: 40px;
 }
 
-.titulo-secao {
+.titulo-secaoo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +142,7 @@
   margin-bottom: 40px;
 }
 
-.titulo-secao h2 {
+.titulo-secaoo h2 {
   color: #54070c;
   font-size: 1.8rem;
   font-weight: 700;
@@ -156,7 +156,7 @@
 }
 
 .card-pais {
-  border: 1px solid #54070c;
+  border: 2px solid rgba(84, 7, 12, 0.08);
   border-radius: 20px;
   padding: 30px 20px;
   text-align: center;

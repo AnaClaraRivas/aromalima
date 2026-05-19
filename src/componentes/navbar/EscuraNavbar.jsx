@@ -21,7 +21,7 @@ export default function NavbarEscura() {
         <li className="active" onClick={() => navigate("/")}>Home</li>
         <li onClick={() => navigate("/sobre")}>Sobre</li>
         <li onClick={() => navigate("/loja")}>Loja</li>
-        <li>Assinaturas</li>
+        <li onClick={() => navigate("/assinaturas")}>Assinaturas</li>
 
         {/* dropdown */}
         <li className="dropdown">
@@ -40,7 +40,9 @@ export default function NavbarEscura() {
             <p onClick={() => navigate("/blog")}>
               Blog
             </p>
-            <p>Cursos e workshops</p>
+            <p onClick={() => navigate("/cursos")}>
+              Cursos e workshops
+            </p>
           </div>
         </li>
 

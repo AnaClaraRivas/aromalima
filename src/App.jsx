@@ -11,6 +11,8 @@ import Cursos from "./paginas/Workshops";
 import Assinaturas from "./paginas/Assinaturas";
 import BlogLeitura from "./paginas/LeituraBlog";
 import Navbar from "./componentes/navbar/Navbar";
+import ProdutosCategoria from "./paginas/ProdutosCategoria";
+import ProdutoDetalhe from "./paginas/ProdutoDetalhe";
 
 function App() {
   return (
@@ -27,7 +29,8 @@ function App() {
         <Route path="/cursos" element={<Cursos />} />
         <Route path="/assinaturas" element={<Assinaturas />} />
         <Route path="/blogleitura" element={<BlogLeitura />} />
-
+        <Route path="/produtos/:categoria" element={<ProdutosCategoria />} />
+        <Route path="/produto/:id" element={<ProdutoDetalhe />} />
       </Routes>
     </BrowserRouter>
   );

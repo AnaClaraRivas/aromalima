@@ -1,0 +1,170 @@
+.produtos-hero{
+  height: 55vh;
+  background-color: #54070C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.hero-content{
+  text-align: center;
+
+  color: white;
+
+  z-index: 2;
+
+  animation: fadeUp 1s ease;
+}
+
+.subtitulo{
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+
+  opacity: 0.8;
+}
+
+.hero-content h1{
+  font-size: 80px;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.hero-descricao{
+  max-width: 700px;
+
+  line-height: 1.7;
+
+  font-size: 18px;
+}
+
+.produtos-grid{
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding: 100px 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+  gap: 40px;
+}
+
+.produto-card{
+  background: white;
+
+  border-radius: 35px;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+}
+
+.produto-card:hover{
+  transform: translateY(-10px);
+}
+
+.produto-imagem{
+  height: 320px;
+
+  background: #ead8c4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produto-imagem img{
+  width: 70%;
+
+  transition: 0.4s ease;
+}
+
+.produto-card:hover img{
+  transform: scale(1.08);
+}
+
+.produto-info{
+  padding: 30px;
+}
+
+.produto-info h2{
+  color: #54070C;
+
+  font-size: 30px;
+
+  margin-bottom: 15px;
+}
+
+.descricao-produto{
+  color: #666;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+}
+
+.preco{
+  display: block;
+
+  color: #8b5e3c;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.produto-info button{
+  width: 100%;
+
+  border: none;
+
+  background: #54070C;
+
+  color: white;
+
+  padding: 16px;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.produto-info button:hover{
+  background: #7c0f17;
+
+  transform: scale(1.02);
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform: translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}

@@ -120,7 +120,7 @@ export default function Blog() {
 
                 <button
                   className="botao-ver-conteudo"
-                  onClick={() => navigate("/blogleitura")}
+                  onClick={() => navigate("/cafeBrasil")}
                 >
                   Ver conteúdo <span>➔</span>
                 </button>

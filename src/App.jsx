@@ -13,6 +13,7 @@ import BlogLeitura from "./paginas/LeituraBlog";
 import Navbar from "./componentes/navbar/Navbar";
 import ProdutosCategoria from "./paginas/ProdutosCategoria";
 import ProdutoDetalhe from "./paginas/ProdutoDetalhe";
+import Contato from "./paginas/Contato";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/blogleitura" element={<BlogLeitura />} />
         <Route path="/produtos/:categoria" element={<ProdutosCategoria />} />
         <Route path="/produto/:id" element={<ProdutoDetalhe />} />
+        <Route path="contato" element={<Contato />} />
       </Routes>
     </BrowserRouter>
   );

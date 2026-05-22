@@ -1,0 +1,219 @@
+.contato-topo {
+  width: 100%;
+  min-height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background: #f5f5f5;
+}
+
+.contato-content {
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #6d0008;
+
+  margin-bottom: 25px;
+}
+
+.descricao-contato {
+  font-size: 20px;
+  line-height: 1.8;
+
+  color: #444;
+
+  max-width: 700px;
+}
+/* parte vinho */
+
+.contato-card {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #6d0008;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.info-box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.mapa-box img {
+  width: 420px;
+  border-radius: 20px;
+}
+
+/* contato */
+
+.fale-conosco {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+.texto-contato h2 {
+  color: #6d0008;
+  margin-bottom: 20px;
+}
+
+.texto-contato p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contatos {
+  margin-top: 25px;
+}
+
+.redes {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.redes a {
+  width: 45px;
+  height: 45px;
+  background: #6d0008;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.redes a:hover {
+  transform: scale(1.1);
+}
+
+/* forms */
+
+.formulario-area {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #6d0008;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+  border: none;
+  border-bottom: 2px solid #c7a4a4;
+  background: transparent;
+  padding: 10px 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.formulario button {
+  width: 140px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid #6d0008;
+  background: transparent;
+  color: #6d0008;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background: #6d0008;
+  color: white;
+}
+
+.img-cafe img {
+  width: 300px;
+}
+
+/* responsivo */
+
+@media (max-width: 900px) {
+
+    .contato-topo {
+        min-height: 300px;
+        padding: 60px 20px;
+    }
+
+    .contato-content h1 {
+        font-size: 42px;
+    }
+
+  .descricao-contato {
+    font-size: 17px;
+  }
+
+  .contato-card {
+    flex-direction: column;
+  }
+
+  .mapa-box img {
+    width: 100%;
+  }
+
+  .formulario-area {
+    flex-direction: column;
+  }
+
+  .img-cafe img {
+    width: 220px;
+  }
+
+}

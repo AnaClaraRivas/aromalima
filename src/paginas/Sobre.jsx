@@ -18,7 +18,7 @@ export default function Sobre() {
         <div className="sobre-content">
           <p className="desde">Desde 1984</p>
           <h1>AROMA LIMA</h1>
-          <p className="descricao">
+          <p className="descricao-sobre">
             Nossa marca nasce da paixão por grãos selecionados e do desejo de
             transformar cada xícara em um momento único.
           </p>

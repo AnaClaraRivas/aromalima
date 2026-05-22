@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
         </li>
 
-        <li>Contato</li>
+        <li onClick={() => navigate("/contato")}>Contato</li>
       </ul>
 
       {/* lado direito */}

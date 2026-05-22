@@ -35,11 +35,12 @@
   margin-bottom: 20px;
 }
 
-.descricao {
+.descricao-sobre {
   font-size: 20px;
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto;
+  color: #ffffff;
 }
 
 /* grid imagens */
@@ -50,7 +51,7 @@
   width: 100%;
   max-width: 1100px;
   position: absolute;
-  bottom: -150px; 
+  margin-top: 650px;
   z-index: 5;
 }
 
@@ -71,7 +72,7 @@
 /* conteudo */
 .sobre-detalhes {
   background-color: #ffffff;
-  padding: 250px 40px 80px 40px; 
+  padding: 350px 40px 80px 40px; 
   display: flex;
   justify-content: center;
 }

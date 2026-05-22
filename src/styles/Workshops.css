@@ -1,6 +1,5 @@
-/* ========================= */
-/* GERAL */
-/* ========================= */
+
+/* geral */
 
 .cursos-container {
     width: 100%;
@@ -9,9 +8,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* ========================= */
-/* SEÇÃO CURSOS */
-/* ========================= */
+/* cursos */
 
 .section-cursos {
     padding: 110px 20px 90px;
@@ -59,10 +56,7 @@
     font-size: 1.02rem;
     text-align: center;
 }
-
-/* ========================= */
-/* GRID */
-/* ========================= */
+/* grid */
 
 .cards-grid {
     display: grid;
@@ -71,9 +65,7 @@
     justify-items: center;
 }
 
-/* ========================= */
-/* SEÇÃO WORKSHOP */
-/* ========================= */
+/* workshop */
 
 .workshopss {
     background-color: #54070C;
@@ -99,9 +91,7 @@
     color: white !important;
 }
 
-/* ========================= */
-/* BLOG */
-/* ========================= */
+/* blog */
 
 .blog {
     padding: 120px 20px;
@@ -212,9 +202,7 @@
     object-fit: cover;
 }
 
-/* ========================= */
-/* WORKSHOP CARD */
-/* ========================= */
+/* workshop card */
 
 .workshop-card {
     background-color: white;
@@ -285,7 +273,7 @@
     margin: 5px 0;
 }
 
-/* BOTÃO SETA */
+/* btn seta */
 
 .workshop-btn {
     width: 48px;
@@ -324,7 +312,7 @@
     background-color: #6b1017;
 }
 
-/* MINI INFO BLOG */
+/* mini info blog */
 
 .mini-info-blog {
     display: flex;
@@ -341,10 +329,7 @@
     font-size: 0.9rem;
     font-weight: 500;
 }
-
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
+/* responsivo */
 
 @media (max-width: 900px) {
 

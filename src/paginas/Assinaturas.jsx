@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from "../componentes/navbar/Navbar";
 import PlanoCard from '../componentes/PlanoCurso';
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import "../styles/global.css";
 import "../styles/Assinaturas.css";
@@ -159,6 +160,7 @@ const Assinaturas = () => {
 
             </div>
 
+            <BotaoSubir />
             <Footer />
 
         </div>

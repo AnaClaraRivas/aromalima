@@ -3,6 +3,7 @@ import "../styles/global.css";
 import "../styles/sobre.css";
 import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import imgSobre1 from "../assets/img/img_sobre1.png";
 import imgSobre2 from "../assets/img/img_sobre2.png";
@@ -77,6 +78,7 @@ export default function Sobre() {
         </div>
       </section>
 
+      <BotaoSubir />
       <Footer />
     </div>
   );

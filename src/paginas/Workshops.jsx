@@ -3,6 +3,7 @@ import CardCurso from '../componentes/home/CardCurso';
 import WorkshopCard from '../componentes/WorkshopCard';
 import Navbar from "../componentes/navbar/Navbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 import "../styles/Workshops.css";
 
 import graosImg from '../assets/graosdecorativos.png';
@@ -87,6 +88,7 @@ const Workshops = () => {
                 </div>
             </section>
 
+            <BotaoSubir />
             <Footer />
 
         </div>

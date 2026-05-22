@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navbar from "../componentes/navbar/Navbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import "../styles/global.css";
 import "../styles/contato.css";
@@ -116,6 +117,7 @@ export default function Contato() {
 
       </section>
 
+      <BotaoSubir />
       <Footer />
     </>
   );

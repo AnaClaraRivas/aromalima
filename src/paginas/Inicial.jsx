@@ -9,6 +9,7 @@ import CardCurso from "../componentes/home/CardCurso";
 import CardAssinatura from "../componentes/home/CardAssinatura";
 import DestaquesLoja from "../componentes/home/DestaquesLoja";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import cafeImg from "../assets/cafeinicial.png";
 import caramelo from "../assets/caramelogelado.png";
@@ -226,6 +227,7 @@ export default function Inicial() {
       {/* LOJA */}
       <DestaquesLoja />
 
+      <BotaoSubir />
       <Footer />
     </div>
   );

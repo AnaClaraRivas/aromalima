@@ -6,6 +6,7 @@ import "../styles/blog.css";
 
 import NavbarEscura from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import decorFolha from "../assets/decor_folha.png";
 import decorGraos from "../assets/decor_graos.png";
@@ -128,7 +129,7 @@ export default function Blog() {
           </div>
         </section>
       </main>
-
+      <BotaoSubir />
       <Footer />
     </div>
   );

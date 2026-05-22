@@ -7,6 +7,7 @@ import "../componentes/destaques.css";
 
 import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 import CardDestaque from "../componentes/CardDestaque";
 
 import imgGraos from "../assets/img/img_graos.png";
@@ -212,7 +213,7 @@ export default function Loja() {
                 "Mel, baunilha e chocolate branco",
 
               alergicos:
-                "Contém leite."
+                "Contém leite e derivados."
             }}
           >
 
@@ -410,6 +411,7 @@ export default function Loja() {
 
       </section>
 
+      <BotaoSubir />
       <Footer />
 
     </div>

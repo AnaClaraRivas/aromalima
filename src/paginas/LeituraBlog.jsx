@@ -4,6 +4,7 @@ import "../styles/blogLeitura.css";
 
 import NavbarEscura from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import capaBlog from "../assets/post_cafe_livro.png";
 import decorFolha from "../assets/decor_folha.png";
@@ -98,6 +99,7 @@ export default function BlogLeitura() {
         </section>
       </main>
 
+      <BotaoSubir />
       <Footer />
     </div>
   );

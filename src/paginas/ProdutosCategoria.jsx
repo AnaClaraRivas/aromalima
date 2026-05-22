@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import "../styles/produtosCategoria.css";
 
@@ -37,9 +38,9 @@ const produtos = {
         "Café arábica especial, leite integral, chantilly artesanal e calda premium.",
 
       origem:
-        "Serra da Mantiqueira • Minas Gerais",
+        "Aroma Lima Cafeteria - SP",
 
-      intensidade:
+      torra:
         "Média",
 
       notas:
@@ -66,10 +67,10 @@ const produtos = {
         "Espresso especial, leite vaporizado e creme dourado.",
 
       origem:
-        "Sul de Minas • Brasil",
+        "Aroma Lima Cafeteria - SP",
 
-      intensidade:
-        "Suave",
+      torra:
+        "Média Escura",
 
       notas:
         "Mel, baunilha e chocolate branco",
@@ -95,10 +96,10 @@ const produtos = {
         "Chocolate premium, leite integral, chantilly e café especial.",
 
       origem:
-        "Blend Aroma Lima",
+        "Aroma Lima Cafeteria - SP",
 
-      intensidade:
-        "Alta",
+      torra:
+        "Média Escura",
 
       notas:
         "Chocolate amargo e creme de leite",
@@ -131,7 +132,7 @@ const produtos = {
         "Aroma Lima Studio",
 
       origem:
-        "Curitiba • Paraná",
+        "São Paulo • Brasil",
 
       garantia:
         "12 meses",
@@ -186,10 +187,10 @@ const produtos = {
         "Cerâmica premium",
 
       fabricante:
-        "Aroma Lima Ceramics",
+        "Aroma Lima Studio",
 
       origem:
-        "Porto Alegre • Brasil",
+        "São Paulo • Brasil",
 
       garantia:
         "6 meses",
@@ -248,7 +249,7 @@ const produtos = {
         "Grãos especiais selecionados manualmente.",
 
       origem:
-        "Cerrado Mineiro",
+        "Sul de Minas • Brasil",
 
       altitude:
         "1100m",
@@ -280,7 +281,7 @@ const produtos = {
         "Mistura exclusiva Aroma Lima.",
 
       origem:
-        "Mantiqueira de Minas",
+        "Sul de Minas • Brasil",
 
       altitude:
         "1300m",
@@ -376,7 +377,7 @@ export default function ProdutosCategoria() {
         ))}
 
       </section>
-
+      <BotaoSubir />
       <Footer />
 
     </div>

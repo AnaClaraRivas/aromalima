@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import BotaoSubir from "../componentes/BotaoSubir";
 
 import "../styles/produtoDetalhe.css";
 
@@ -16,6 +17,15 @@ export default function ProdutoDetalhe() {
     return (
       <div>
         <EscuraNavbar />
+
+        <div className="voltar-container">
+          <button
+            className="btn-voltar"
+            onClick={() => window.history.back()}
+          >
+            ← Voltar
+          </button>
+        </div>
 
         <div className="produto-nao-encontrado">
           <h1>Produto não encontrado</h1>
@@ -32,7 +42,17 @@ export default function ProdutoDetalhe() {
 
       <EscuraNavbar />
 
+      <div className="voltar-container">
+          <button
+            className="btn-voltar"
+            onClick={() => window.history.back()}
+          >
+            ← Voltar
+          </button>
+        </div>
+
       <section className="detalhe-container">
+
 
         {/* img */}
 
@@ -132,8 +152,8 @@ export default function ProdutoDetalhe() {
             </div>
 
             <div className="info-card">
-              <h3>Intensidade</h3>
-              <p>{produto.intensidade}</p>
+              <h3>Torra</h3>
+              <p>{produto.torra }</p>
             </div>
 
             <div className="info-card">
@@ -263,7 +283,7 @@ export default function ProdutoDetalhe() {
         </>
 
       )}
-
+      <BotaoSubir />
       <Footer />
 
     </div>

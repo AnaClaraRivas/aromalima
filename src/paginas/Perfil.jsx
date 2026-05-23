@@ -6,10 +6,13 @@ import { Pencil, Camera } from "lucide-react";
 
 import NavbarEscura from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+import CardCurso from "../componentes/home/CardCurso";
 
 import perfilPadrao from "../assets/perfil_padrao.png";
 
 export default function Perfil() {
+
+    const [inscricoes, setInscricoes] = useState([]);
 
     const [usuario, setUsuario] = useState(null);
 
@@ -32,6 +35,7 @@ export default function Perfil() {
             setUsuario(usuarioSalvo);
 
             setNome(usuarioSalvo.nome);
+            buscarInscricoes(usuarioSalvo.id);
 
         }
 
@@ -119,6 +123,24 @@ export default function Perfil() {
 
     }
 
+    async function buscarInscricoes(idUsuario) {
+
+    try {
+
+        const resposta = await fetch(
+            `http://localhost/aromalimaback/rotas/minhas_inscricoes.php?usuario_id=${idUsuario}`
+        );
+
+        const dados = await resposta.json();
+
+        setInscricoes(dados);
+
+    } catch (erro) {
+
+        console.log(erro);
+
+    }
+}
 
 
 
@@ -271,7 +293,6 @@ export default function Perfil() {
                     </button>
 
 
-
                     <button
                         className="botao-sair-conta-perfil-aroma"
                         onClick={sairDaConta}
@@ -280,6 +301,48 @@ export default function Perfil() {
                     </button>
 
                 </div>
+
+                <div className="minhas-inscricoes">
+
+                        <div className="topo-inscricoes">
+
+                            <h2>Minhas inscrições</h2>
+
+                        </div>
+
+                        {inscricoes.length === 0 ? (
+
+                            <p className="sem-inscricao">
+                                Você ainda não se inscreveu em nenhum curso.
+                            </p>
+
+                        ) : (
+
+                                <div className="cards-grid">
+
+                                    {inscricoes.map((curso) => (
+
+                                        <CardCurso
+                                            key={curso.id}
+                                            titulo={curso.curso_titulo}
+                                            imagem={curso.curso_imagem}
+                                            curso={{
+                                                titulo: curso.curso_titulo,
+                                                descricao: curso.curso_descricao,
+                                                imagem: curso.curso_imagem,
+                                                duracao: curso.duracao,
+                                                horario: curso.horario,
+                                                modalidade: curso.modalidade,
+                                                local: curso.local
+                                            }}
+                                        />
+
+                                    ))}
+
+                                </div>
+                        )}
+
+                    </div>
 
             </div>
 

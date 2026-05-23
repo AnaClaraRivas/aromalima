@@ -12,6 +12,66 @@ export default function DetalheCurso() {
   const navigate = useNavigate();
 
   const curso = location.state;
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+  async function fazerInscricao() {
+
+  if (!usuario) {
+
+    alert("Faça login para se inscrever");
+
+    return;
+  }
+
+  console.log(usuario);
+
+  try {
+
+    
+    const resposta = await fetch(
+          "http://localhost/aromalimaback/rotas/inscrever.php",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify({
+              usuario_id: usuario.id,
+              curso_titulo: curso.titulo,
+              curso_descricao: curso.descricao,
+              curso_imagem: curso.imagem,
+              duracao: curso.duracao,
+              horario: curso.horario,
+              modalidade: curso.modalidade,
+              local: curso.local
+            }),
+          }
+        );
+
+        const dados = await resposta.json();
+        console.log(dados);
+        
+
+        if (dados.status === "ok") {
+
+          alert("Inscrição realizada com sucesso!");
+
+        }
+
+        else if (dados.status === "existe") {
+
+          alert("Você já está inscrito neste curso!");
+
+        }
+
+      } catch (erro) {
+
+        console.log(erro);
+
+      }
+    }
 
   if (!curso) {
     return <h1>Curso não encontrado</h1>;
@@ -79,7 +139,10 @@ export default function DetalheCurso() {
 
             </div>
 
-            <button className="btn-inscricao">
+            <button
+              className="btn-inscricao"
+              onClick={fazerInscricao}
+            >
               Fazer inscrição
             </button>
 

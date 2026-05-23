@@ -14,6 +14,7 @@ import Navbar from "./componentes/navbar/Navbar";
 import ProdutosCategoria from "./paginas/ProdutosCategoria";
 import ProdutoDetalhe from "./paginas/ProdutoDetalhe";
 import Contato from "./paginas/Contato";
+import Perfil from "./paginas/Perfil";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
         <Route path="/produtos/:categoria" element={<ProdutosCategoria />} />
         <Route path="/produto/:id" element={<ProdutoDetalhe />} />
         <Route path="contato" element={<Contato />} />
+        <Route path="/perfil" element={<Perfil />} />
+
       </Routes>
     </BrowserRouter>
   );

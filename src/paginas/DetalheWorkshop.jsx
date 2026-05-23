@@ -12,9 +12,74 @@ export default function DetalheWorkshop() {
   const navigate = useNavigate();
 
   const workshop = location.state;
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
 
   if (!workshop) {
     return <h1>Workshop não encontrado</h1>;
+  }
+
+  async function fazerInscricao() {
+
+    if (!usuario) {
+
+      alert("Faça login para se inscrever");
+
+      return;
+    }
+
+    try {
+
+      const resposta = await fetch(
+        "http://localhost/aromalimaback/rotas/inscrever.php",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify({
+
+            usuario_id: usuario.id,
+
+            curso_titulo: workshop.titulo,
+
+            curso_descricao: workshop.descricao,
+
+            curso_imagem: workshop.imagem,
+
+            duracao: workshop.data,
+
+            horario: workshop.horario,
+
+            modalidade: workshop.modalidade,
+
+            local: workshop.local,
+
+            tipo: "workshop"
+          }),
+        }
+      );
+
+      const dados = await resposta.json();
+
+      if (dados.status === "ok") {
+
+        alert("Inscrição realizada com sucesso!");
+
+      }
+
+      else if (dados.status === "existe") {
+
+        alert("Você já está inscrito neste workshop!");
+
+      }
+
+    } catch (erro) {
+
+      console.log(erro);
+
+    }
   }
 
   return (
@@ -72,7 +137,10 @@ export default function DetalheWorkshop() {
 
             </div>
 
-            <button className="btn-inscricao">
+            <button
+              className="btn-inscricao"
+              onClick={fazerInscricao}
+            >
               Fazer inscrição
             </button>
 

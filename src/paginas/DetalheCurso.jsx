@@ -45,7 +45,8 @@ export default function DetalheCurso() {
               duracao: curso.duracao,
               horario: curso.horario,
               modalidade: curso.modalidade,
-              local: curso.local
+              local: curso.local,
+              tipo: "curso"
             }),
           }
         );

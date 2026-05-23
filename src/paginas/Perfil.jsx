@@ -6,7 +6,9 @@ import { Pencil, Camera } from "lucide-react";
 
 import NavbarEscura from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
+
 import CardCurso from "../componentes/home/CardCurso";
+import WorkshopCard from "../componentes/WorkshopCard";
 
 import perfilPadrao from "../assets/perfil_padrao.png";
 
@@ -35,11 +37,34 @@ export default function Perfil() {
             setUsuario(usuarioSalvo);
 
             setNome(usuarioSalvo.nome);
+
             buscarInscricoes(usuarioSalvo.id);
 
         }
 
     }, []);
+
+
+
+
+    async function buscarInscricoes(idUsuario) {
+
+        try {
+
+            const resposta = await fetch(
+                `http://localhost/aromalimaback/rotas/minhas_inscricoes.php?usuario_id=${idUsuario}`
+            );
+
+            const dados = await resposta.json();
+
+            setInscricoes(dados);
+
+        } catch (erro) {
+
+            console.log(erro);
+
+        }
+    }
 
 
 
@@ -123,24 +148,6 @@ export default function Perfil() {
 
     }
 
-    async function buscarInscricoes(idUsuario) {
-
-    try {
-
-        const resposta = await fetch(
-            `http://localhost/aromalimaback/rotas/minhas_inscricoes.php?usuario_id=${idUsuario}`
-        );
-
-        const dados = await resposta.json();
-
-        setInscricoes(dados);
-
-    } catch (erro) {
-
-        console.log(erro);
-
-    }
-}
 
 
 
@@ -169,11 +176,24 @@ export default function Perfil() {
 
 
 
+
     if (!usuario) {
 
         return <h1>Carregando...</h1>;
 
     }
+
+
+
+
+    const cursos = inscricoes.filter(
+        (item) => item.tipo === "curso"
+    );
+
+    const workshops = inscricoes.filter(
+        (item) => item.tipo === "workshop"
+    );
+
 
 
 
@@ -293,6 +313,7 @@ export default function Perfil() {
                     </button>
 
 
+
                     <button
                         className="botao-sair-conta-perfil-aroma"
                         onClick={sairDaConta}
@@ -302,47 +323,101 @@ export default function Perfil() {
 
                 </div>
 
+
+
+                {/* CURSOS */}
+
                 <div className="minhas-inscricoes">
 
-                        <div className="topo-inscricoes">
+                    <div className="topo-inscricoes">
 
-                            <h2>Minhas inscrições</h2>
+                        <h2>Meus cursos</h2>
+
+                    </div>
+
+                    {cursos.length === 0 ? (
+
+                        <p className="sem-inscricao">
+                            Você ainda não se inscreveu em nenhum curso.
+                        </p>
+
+                    ) : (
+
+                        <div className="cards-grid">
+
+                            {cursos.map((curso) => (
+
+                                <CardCurso
+                                    key={curso.id}
+                                    titulo={curso.curso_titulo}
+                                    imagem={curso.curso_imagem}
+                                    curso={{
+                                        titulo: curso.curso_titulo,
+                                        descricao: curso.curso_descricao,
+                                        imagem: curso.curso_imagem,
+                                        duracao: curso.duracao,
+                                        horario: curso.horario,
+                                        modalidade: curso.modalidade,
+                                        local: curso.local
+                                    }}
+                                />
+
+                            ))}
 
                         </div>
 
-                        {inscricoes.length === 0 ? (
+                    )}
 
-                            <p className="sem-inscricao">
-                                Você ainda não se inscreveu em nenhum curso.
-                            </p>
+                </div>
 
-                        ) : (
 
-                                <div className="cards-grid">
 
-                                    {inscricoes.map((curso) => (
+                {/* WORKSHOPS */}
 
-                                        <CardCurso
-                                            key={curso.id}
-                                            titulo={curso.curso_titulo}
-                                            imagem={curso.curso_imagem}
-                                            curso={{
-                                                titulo: curso.curso_titulo,
-                                                descricao: curso.curso_descricao,
-                                                imagem: curso.curso_imagem,
-                                                duracao: curso.duracao,
-                                                horario: curso.horario,
-                                                modalidade: curso.modalidade,
-                                                local: curso.local
-                                            }}
-                                        />
+                <div className="minhas-inscricoes">
 
-                                    ))}
+                    <div className="topo-inscricoes">
 
-                                </div>
-                        )}
+                        <h2>Meus workshops</h2>
 
                     </div>
+
+                    {workshops.length === 0 ? (
+
+                        <p className="sem-inscricao">
+                            Você ainda não se inscreveu em nenhum workshop.
+                        </p>
+
+                    ) : (
+
+                        <div className="cards-grid">
+
+                            {workshops.map((workshop) => (
+
+                                <WorkshopCard
+                                    key={workshop.id}
+                                    titulo={workshop.curso_titulo}
+                                    data={workshop.duracao}
+                                    modalidade={workshop.modalidade}
+                                    imagem={workshop.curso_imagem}
+                                    workshop={{
+                                        titulo: workshop.curso_titulo,
+                                        descricao: workshop.curso_descricao,
+                                        imagem: workshop.curso_imagem,
+                                        data: workshop.duracao,
+                                        horario: workshop.horario,
+                                        modalidade: workshop.modalidade,
+                                        local: workshop.local
+                                    }}
+                                />
+
+                            ))}
+
+                        </div>
+
+                    )}
+
+                </div>
 
             </div>
 

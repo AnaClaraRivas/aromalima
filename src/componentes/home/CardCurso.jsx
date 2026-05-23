@@ -1,28 +1,59 @@
 import React from 'react';
-import './CardCurso.css'; 
+import { useNavigate } from 'react-router-dom';
 
-const CardCurso = ({ imagem, titulo, aoClicar }) => {
+import './CardCurso.css';
+
+const CardCurso = ({
+  imagem,
+  titulo,
+  curso
+}) => {
+
+  const navigate = useNavigate();
+
   return (
-    <div className="card-curso-container" onClick={aoClicar}>
+
+    <div
+      className="card-curso-container"
+      onClick={() =>
+        navigate("/detalheCurso", {
+          state: curso
+        })
+      }
+    >
+
       <div className="card-curso-imagem">
-        <img src={imagem} alt={titulo} className="card-curso-img" />
+
+        <img
+          src={imagem}
+          alt={titulo}
+          className="card-curso-img"
+        />
+
       </div>
 
       <div className="card-curso-botao">
-        <h3 className="card-curso-titulo">{titulo}</h3>
-        
+
+        <h3 className="card-curso-titulo">
+          {titulo}
+        </h3>
+
         <button className="curso-botao">
-          <svg 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
             className="card-curso-icone"
           >
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
+
         </button>
+
       </div>
+
     </div>
   );
 };

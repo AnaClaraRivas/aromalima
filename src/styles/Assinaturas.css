@@ -13,9 +13,7 @@ body {
     position: relative;
 }
 
-/* ========================= */
-/* HERO */
-/* ========================= */
+/* heroo */
 
 .assinaturasprim {
     position: relative;
@@ -80,9 +78,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* ========================= */
-/* IMAGENS */
-/* ========================= */
+/* img */
 
 .img-destaque-container {
     display: flex;
@@ -106,9 +102,7 @@ body {
     transform: translateY(-12px) scale(1.02);
 }
 
-/* ========================= */
-/* TITULO PLANOS */
-/* ========================= */
+/* titulos */
 
 .titulo-planos {
     margin-top: 80px;
@@ -126,9 +120,7 @@ body {
     font-size: 1rem;
 }
 
-/* ========================= */
-/* GRID DOS PLANOS */
-/* ========================= */
+/* grid */
 
 .planos-grid {
     display: flex;
@@ -139,9 +131,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* ========================= */
-/* CARD BASE */
-/* ========================= */
+/* card base */
 
 .plano-card {
     width: 100%;
@@ -191,9 +181,7 @@ body {
     pointer-events: none;
 }
 
-/* ========================= */
-/* HEADER */
-/* ========================= */
+/* header */
 
 .plano-header {
     position: absolute;
@@ -215,9 +203,7 @@ body {
     white-space: nowrap;
 }
 
-/* ========================= */
-/* CORPO */
-/* ========================= */
+/* body */
 
 .plano-body {
     width: 100%;
@@ -237,9 +223,7 @@ body {
     min-height: 65px;
 }
 
-/* ========================= */
-/* VANTAGENS */
-/* ========================= */
+/* vanatagens */
 
 .plano-vantagens {
     list-style: none;
@@ -266,9 +250,7 @@ body {
     margin-top: 2px;
 }
 
-/* ========================= */
-/* PREÇO */
-/* ========================= */
+/* preco */
 
 .preco-container {
     display: flex;
@@ -293,9 +275,7 @@ body {
     margin: 8px 0 25px;
 }
 
-/* ========================= */
-/* BOTÕES */
-/* ========================= */
+/* btns */
 
 .btn-assinar {
     margin-top: auto;
@@ -328,9 +308,7 @@ body {
     transform: scale(1.03);
 }
 
-/* ========================= */
-/* DARK */
-/* ========================= */
+/* dark */
 
 .plano-dark {
     background: linear-gradient(135deg, #54070C, #6f1017);
@@ -352,9 +330,7 @@ body {
     color: #54070C;
 }
 
-/* ========================= */
-/* LIGHT */
-/* ========================= */
+/* light */
 
 .plano-light {
     background-color: #ffffff;
@@ -385,9 +361,7 @@ body {
     color: #ffffff;
 }
 
-/* ========================= */
-/* CARD DESTAQUE */
-/* ========================= */
+/* card destaque */
 
 .plano-destaque-unico {
     display: flex;
@@ -443,9 +417,7 @@ body {
     font-size: 2rem;
 }
 
-/* ========================= */
-/* FAQ */
-/* ========================= */
+/* faq */
 
 .perguntas {
     margin-top: 120px;
@@ -484,9 +456,8 @@ body {
     line-height: 1.7;
 }
 
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
+
+/* responsivo */
 
 @media (max-width: 768px) {
 

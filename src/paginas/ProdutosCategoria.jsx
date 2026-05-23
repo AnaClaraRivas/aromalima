@@ -334,6 +334,16 @@ export default function ProdutosCategoria() {
 
       </section>
 
+      <div className="voltar-container">
+          <button
+            className="btn-voltar"
+            onClick={() => window.history.back()}
+          >
+            ← Voltar
+          </button>
+      </div>
+
+
       <section className="produtos-grid">
 
         {listaProdutos.map((produto) => (

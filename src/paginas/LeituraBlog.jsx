@@ -32,6 +32,7 @@ export default function BlogLeitura() {
           </p>
         </div>
       </header>
+      
 
       <main className="conteudo-leitura-blog">
 
@@ -40,6 +41,7 @@ export default function BlogLeitura() {
         </div>
 
         <section className="texto-blog">
+
 
           <p className="paragrafo-destaque">
             O café faz parte da rotina de milhões de pessoas, mas muitas vezes
@@ -95,6 +97,15 @@ export default function BlogLeitura() {
             Além disso, prefira comprar quantidades menores para manter sempre
             o frescor do café.
           </p>
+
+          <div className="voltar-container">
+              <button
+                className="btn-voltar"
+                onClick={() => window.history.back()}
+              >
+                ← Voltar
+              </button>
+          </div>
 
         </section>
       </main>

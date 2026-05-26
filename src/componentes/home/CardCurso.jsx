@@ -11,16 +11,17 @@ const CardCurso = ({
 
   const navigate = useNavigate();
 
+  function abrirCurso() {
+
+    navigate("/detalheCurso", {
+      state: curso
+    });
+
+  }
+
   return (
 
-    <div
-      className="card-curso-container"
-      onClick={() =>
-        navigate("/detalheCurso", {
-          state: curso
-        })
-      }
-    >
+    <div className="card-curso-container">
 
       <div className="card-curso-imagem">
 
@@ -38,7 +39,10 @@ const CardCurso = ({
           {titulo}
         </h3>
 
-        <button className="curso-botao">
+        <button
+          className="curso-botao"
+          onClick={abrirCurso}
+        >
 
           <svg
             viewBox="0 0 24 24"

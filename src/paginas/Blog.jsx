@@ -11,6 +11,8 @@ import BotaoSubir from "../componentes/BotaoSubir";
 import decorFolha from "../assets/decor_folha.png";
 import decorGraos from "../assets/decor_graos.png";
 import postImg from "../assets/post_cafe_livro.png";
+import postImg2 from "../assets/post_cafe_livro3.png";
+import postImg3 from "../assets/post_cafe_livro2.png";
 import bandeiraBrasil from "../assets/bandeira_brasil.png";
 import bandeiraFranca from "../assets/bandeira_franca.png";
 import bandeiraCanada from "../assets/bandeira_canada.png";
@@ -20,22 +22,24 @@ const postsPrincipais = [
     id: 1,
     titulo: "Como melhorar o sabor do seu café em casa",
     descricao:
-      "Descubra técnicas simples e práticas que podem transformar completamente o sabor do seu café no dia a dia.",
-    imagem: postImg,
+      "Pequenas mudanças no preparo podem transformar totalmente sua experiência. Descubra técnicas simples para deixar seu café mais equilibrado, aromático e intenso.",
+    imagem: postImg2,
   },
+
   {
     id: 2,
-    titulo: "Do grão à xícara: a jornada do café",
+    titulo: "Os cafés mais raros e caros do mundo",
     descricao:
-      "Entenda todo o processo do café, desde o cultivo até chegar à sua xícara, e valorize cada etapa dessa experiência.",
+      "Conheça variedades exclusivas apreciadas por especialistas e descubra o que torna alguns cafés tão especiais, sofisticados e disputados internacionalmente.",
     imagem: postImg,
   },
+
   {
     id: 3,
-    titulo: "Métodos de preparo: qual escolher?",
+    titulo: "Métodos de preparo: qual combina com você?",
     descricao:
-      "Conheça os principais métodos de preparo e descubra qual combina mais com o seu gosto e rotina.",
-    imagem: postImg,
+      "French Press, V60, Espresso ou Aeropress? Entenda as diferenças entre os principais métodos de preparo e encontre o ideal para o seu paladar.",
+    imagem: postImg3,
   },
 ];
 

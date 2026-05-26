@@ -1,0 +1,232 @@
+.pagamento {
+  background: #f5f5f5;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.pagamento-tudo {
+  height: 30vh;
+  background: #54070C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.pagamento-tudo-conteudo {
+  text-align: center;
+}
+
+.pagamento-tudo h1 {
+  font-size: 64px;
+}
+
+.pagamento-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.formulario-pagamento {
+  flex: 2;
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.formulario-pagamento h2 {
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.metodos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.metodos button {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #54070C;
+  background: transparent;
+  color: #54070C;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.metodos button.ativo {
+  background: #54070C;
+  color: white;
+}
+
+.aviso-demo {
+  background: #fff3cd;
+  color: #856404;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #ffe69c;
+}
+
+.cartao-visual {
+  background: linear-gradient(135deg, #54070C, #7d1118);
+  color: white;
+  border-radius: 22px;
+  padding: 30px;
+  margin-bottom: 30px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(84, 7, 12, 0.3);
+}
+
+.logo-cartao {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cartao-visual h3 {
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+.dados-cartao {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.pagamento-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.pagamento-input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #000;
+}
+
+.pagamento-input-group input,
+.pagamento-input-group textarea {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #d3d3d3;
+  outline: none;
+  font-size: 15px;
+  background: #e7e7e7;
+  color: #000;
+  transition: 0.3s;
+}
+
+.pagamento-input-group input:focus,
+.pagamento-input-group textarea:focus {
+  border: 1px solid #54070C;
+  background: #dcdcdc;
+}
+
+.pagamento-input-group textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.linha-inputs {
+  display: flex;
+  gap: 20px;
+}
+
+.pix-box {
+  background: #f8f8f8;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+
+
+.resumo-pagamento {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  height: fit-content;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  color: #000;
+}
+
+.item-resumo {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.linha-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-pagar {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border: none;
+  background: #54070C;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-pagar:hover {
+  transform: translateY(-2px);
+  background: #6d0b12;
+}
+
+.img-pix{
+    width:100%;
+    max-width:260px;
+
+    border-radius:25px;
+
+    margin-top:20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+
+    transition:0.3s ease;
+}
+
+.img-pix:hover{
+    transform:scale(1.03);
+}
+
+@media (max-width: 900px) {
+
+  .pagamento-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .linha-inputs {
+    flex-direction: column;
+  }
+
+  .pagamento-tudo h1 {
+    font-size: 42px;
+  }
+
+}

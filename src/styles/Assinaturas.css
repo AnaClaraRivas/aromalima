@@ -39,6 +39,7 @@ body {
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
+
 }
 
 .intro {
@@ -245,7 +246,7 @@ body {
     gap: 10px;
 }
 
-.check {
+.checkass {
     font-weight: bold;
     margin-top: 2px;
 }

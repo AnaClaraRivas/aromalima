@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/global.css";
 import "../styles/inicial.css";
 import "../styles/DestaquesLoja.css";
@@ -17,9 +18,11 @@ import latte from "../assets/lattedourado.png";
 import choco from "../assets/chocolima.png";
 import preparo from "../assets/preparo.png";
 import barista from "../assets/barista.png";
+import barista2 from "../assets/barista2.jfif";
 import iconecafe from "../assets/iconecafe.png";
 
 export default function Inicial() {
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -44,13 +47,21 @@ export default function Inicial() {
             </p>
 
             <div className="hero-botoes">
-              <button className="botao-padrao">
+
+              <button
+                className="botao-padrao"
+                onClick={() => navigate("/loja")}
+              >
                 Confira nossos cafés
               </button>
 
-              <button className="botao-secundario">
+              <button
+                className="botao-secundario"
+                onClick={() => navigate("/sobre")}
+              >
                 Conheça a história
               </button>
+
             </div>
 
             {/* MINI INFOS */}
@@ -151,11 +162,29 @@ export default function Inicial() {
                 <CardCurso
                   titulo="Preparação de café simples"
                   imagem={preparo}
+                  curso={{
+                    titulo: "Preparação de café simples",
+                    descricao: "Aprenda os fundamentos do preparo do café e descubra técnicas incríveis.",
+                    imagem: preparo,
+                    duracao: "2 semanas",
+                    horario: "18:00",
+                    modalidade: "Presencial",
+                    local: "Aroma Lima Cafeteria"
+                  }}
                 />
 
                 <CardCurso
                   titulo="Formação de Barista"
-                  imagem={preparo}
+                  imagem={barista2}
+                  curso={{
+                    titulo: "Formação de Barista",
+                    descricao: "Desenvolva habilidades profissionais de barista.",
+                    imagem: barista2,
+                    duracao: "1 mês",
+                    horario: "19:00",
+                    modalidade: "Presencial",
+                    local: "Aroma Lima Cafeteria"
+                  }}
                 />
 
               </div>
@@ -208,14 +237,14 @@ export default function Inicial() {
               plano="ASSINATURA PRATA"
               preco="37,00"
               descricao="Ideal para quem quer café bom no dia a dia"
-              aoClicar={() => console.log("Prata")}
+              aoClicar={() => navigate("assinaturas")}
             />
 
             <CardAssinatura
               plano="ASSINATURA OURO"
               preco="79,00"
               descricao="Para quem quer viver o café de verdade"
-              aoClicar={() => console.log("Ouro")}
+              aoClicar={() => navigate("assinaturas")}
             />
 
           </div>

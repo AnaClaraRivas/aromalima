@@ -10,6 +10,7 @@ import graosImg from '../assets/graosdecorativos.png';
 import barista from "../assets/barista.png";
 import barista2 from "../assets/barista2.jfif";
 import barista3 from "../assets/barista3.jfif";
+import preparo from "../assets/preparo.png";
 import degustacao from "../assets/degustacao.jfif";
 import iniciantes from "../assets/iniciantes.jpg";
 import moagem from "../assets/moagem.jfif";
@@ -21,7 +22,7 @@ const Workshops = () => {
         {
             id: 1,
             titulo: "Preparação de café simples",
-            imagem: barista,
+            imagem: preparo,
             descricao:
             "Aprenda os fundamentos do preparo do café e descubra técnicas simples para melhorar aroma, sabor e extração.",
             duracao: "2 semanas",

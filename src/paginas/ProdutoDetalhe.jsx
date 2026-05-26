@@ -124,15 +124,9 @@ export default function ProdutoDetalhe() {
           <span className="preco">{produto.preco}</span>
 
           <div className="acoes">
-            <button className="btn-comprar">
-              Finalizar Compra
-            </button>
-
-            <button
-              className="btn-favorito"
-              onClick={() => adicionarAoCarrinho(produto)}
-            >
-              ♡ Adicionar ao carrinho
+            <button className="btn-comprar"
+            onClick={() => adicionarAoCarrinho(produto)}>
+              Adicionar ao carrinho
             </button>
           </div>
         </div>

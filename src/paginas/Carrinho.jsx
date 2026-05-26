@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import EscuraNavbar from "../componentes/navbar/EscuraNavbar";
 import Footer from "../componentes/footer/Footer";
@@ -18,7 +19,7 @@ export default function Carrinho() {
         fetch(`${API}?usuario_id=${usuarioId}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data); 
+                console.log(data);
                 setItens(data);
                 setCarregando(false);
             })
@@ -89,8 +90,9 @@ export default function Carrinho() {
         return acc + preco * item.quantidade;
 
     }, 0);
-
+    const navigate = useNavigate();
     return (
+
         <div className="carrinho-page">
 
             <EscuraNavbar />
@@ -115,12 +117,10 @@ export default function Carrinho() {
                             {itens.map((item) => (
                                 <div className="item-carrinho" key={item.id}>
 
-                                    {/* imagem */}
                                     <div className="img-item">
                                         <img src={item.imagem} alt={item.nome_produto} />
                                     </div>
 
-                                    {/* infos */}
                                     <div className="info-item">
                                         <h3>{item.nome_produto}</h3>
 
@@ -175,7 +175,10 @@ export default function Carrinho() {
                                 <strong>R$ {total.toFixed(2)}</strong>
                             </div>
 
-                            <button className="btn-finalizar">
+                            <button
+                                className="btn-finalizar"
+                                onClick={() => navigate("/pagamento")}
+                            >
                                 Finalizar compra
                             </button>
 

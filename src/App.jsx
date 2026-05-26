@@ -19,6 +19,10 @@ import CafeBrasil from "./paginas/CafeBrasil";
 import DetalheWorkshop from "./paginas/DetalheWorkshop";
 import DetalheCurso from "./paginas/DetalheCurso";
 import Carrinho from "./paginas/Carrinho";
+import Pagamento from "./paginas/Pagamento";
+import PedidoFinalizado from "./paginas/PedidoFinalizado";
+
+
 
 
 
@@ -45,6 +49,9 @@ function App() {
         <Route path="detalheWorkshop" element={<DetalheWorkshop />} />
         <Route path="detalheCurso" element={<DetalheCurso />} />
         <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/pagamento" element={<Pagamento />} />
+        <Route path="/pagamentofinal" element={<PedidoFinalizado />} />
+
 
       </Routes>
     </BrowserRouter>

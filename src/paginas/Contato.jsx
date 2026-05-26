@@ -33,7 +33,7 @@ export default function Contato() {
           {/* esquerda */}
           <div className="info-box">
 
-            <div className="info-item">
+            <div className="info-item-contato">
               <h3>Localização</h3>
               <p>
                 Rua Exemplo, 123 - Centro <br />
@@ -41,7 +41,7 @@ export default function Contato() {
               </p>
             </div>
 
-            <div className="info-item">
+            <div className="info-item-contato">
               <h3>Horário de funcionamento</h3>
               <p>
                 Segunda a Sexta: 08h às 19h <br />

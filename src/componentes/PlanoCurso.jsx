@@ -11,7 +11,7 @@ const PlanoCard = ({ titulo, descricao, vantagens, preco, dark = true }) => {
         <ul className="plano-vantagens">
           {vantagens.map((v, index) => (
             <li key={index}>
-              <span className="check">✓</span> {v}
+              <span className="checkass">✓</span> {v}
             </li>
           ))}
         </ul>

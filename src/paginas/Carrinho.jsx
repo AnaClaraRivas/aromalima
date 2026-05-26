@@ -124,7 +124,7 @@ export default function Carrinho() {
                                     <div className="info-item">
                                         <h3>{item.nome_produto}</h3>
 
-                                        <p className="preco">
+                                        <p className="precocar">
                                             R$ {Number(item.preco).toFixed(2)}
                                         </p>
                                         <div className="quantidade">

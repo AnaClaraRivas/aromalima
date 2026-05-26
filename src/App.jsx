@@ -18,6 +18,9 @@ import Perfil from "./paginas/Perfil";
 import CafeBrasil from "./paginas/CafeBrasil";
 import DetalheWorkshop from "./paginas/DetalheWorkshop";
 import DetalheCurso from "./paginas/DetalheCurso";
+import Carrinho from "./paginas/Carrinho";
+
+
 
 function App() {
   return (
@@ -41,6 +44,8 @@ function App() {
         <Route path="cafeBrasil" element={<CafeBrasil />} />
         <Route path="detalheWorkshop" element={<DetalheWorkshop />} />
         <Route path="detalheCurso" element={<DetalheCurso />} />
+        <Route path="/carrinho" element={<Carrinho />} />
+
       </Routes>
     </BrowserRouter>
   );

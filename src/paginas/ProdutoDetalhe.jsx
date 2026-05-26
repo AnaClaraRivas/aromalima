@@ -8,9 +8,7 @@ import BotaoSubir from "../componentes/BotaoSubir";
 import "../styles/produtoDetalhe.css";
 
 export default function ProdutoDetalhe() {
-
   const location = useLocation();
-
   const produto = location.state;
 
   if (!produto) {
@@ -19,10 +17,7 @@ export default function ProdutoDetalhe() {
         <EscuraNavbar />
 
         <div className="voltar-container">
-          <button
-            className="btn-voltar"
-            onClick={() => window.history.back()}
-          >
+          <button className="btn-voltar" onClick={() => window.history.back()}>
             ← Voltar
           </button>
         </div>
@@ -36,57 +31,71 @@ export default function ProdutoDetalhe() {
     );
   }
 
+  function adicionarAoCarrinho(produto) {
+
+    const precoLimpo = Number(
+      String(produto.preco)
+        .replace("R$", "")
+        .replace(/\./g, "")   // remove pontos de milhar
+        .replace(",", ".")    // troca vírgula decimal
+        .trim()
+    );
+
+    fetch("http://localhost/aromalimaback/rotas/carrinho.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        usuario_id: 1,
+        produto_id: produto.id ?? produto.nome,
+        nome_produto: produto.nome,
+        preco: precoLimpo, // 🔥 AGORA É NÚMERO PURO
+        imagem: produto.imagem,
+      }),
+    })
+      .then(async (res) => {
+        const text = await res.text();
+
+        try {
+          return JSON.parse(text);
+        } catch (e) {
+          throw new Error("Resposta não é JSON válido");
+        }
+      })
+      .then((data) => {
+        alert(data.mensagem || "Adicionado ao carrinho!");
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Erro ao adicionar ao carrinho");
+      });
+  }
+
   return (
-
     <div className="detalhe-page">
-
       <EscuraNavbar />
 
       <div className="voltar-container">
-          <button
-            className="btn-voltar"
-            onClick={() => window.history.back()}
-          >
-            ← Voltar
-          </button>
-        </div>
+        <button className="btn-voltar" onClick={() => window.history.back()}>
+          ← Voltar
+        </button>
+      </div>
 
       <section className="detalhe-container">
-
-
-        {/* img */}
-
         <div className="detalhe-imagem">
-
           <div className="circulo-bg"></div>
-
-          <img
-            src={produto.imagem}
-            alt={produto.nome}
-          />
-
+          <img src={produto.imagem} alt={produto.nome} />
         </div>
 
-        {/* infos */}
-
         <div className="detalhe-info">
+          <p className="mini">Aroma Lima • Produto Especial</p>
 
-          <p className="mini">
-            Aroma Lima • Produto Especial
-          </p>
+          <h1>{produto.nome}</h1>
 
-          <h1>
-            {produto.nome}
-          </h1>
-
-          <p className="descricao">
-            {produto.descricao}
-          </p>
-
-          {/* tags */}
+          <p className="descricao">{produto.descricao}</p>
 
           <div className="tags">
-
             {produto.categoria === "cafe" && (
               <>
                 <span>Artesanal</span>
@@ -110,182 +119,27 @@ export default function ProdutoDetalhe() {
                 <span>Especial</span>
               </>
             )}
-
           </div>
 
-          <span className="preco">
-            {produto.preco}
-          </span>
+          <span className="preco">{produto.preco}</span>
 
           <div className="acoes">
-
             <button className="btn-comprar">
               Finalizar Compra
             </button>
 
-            <button className="btn-favorito">
-              ♡ Favoritar
+            <button
+              className="btn-favorito"
+              onClick={() => adicionarAoCarrinho(produto)}
+            >
+              ♡ Adicionar ao carrinho
             </button>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* informações */}
-
-      <section className="infos-produto">
-
-        {/* cafes */}
-
-        {produto.categoria === "cafe" && (
-          <>
-            <div className="info-card">
-              <h3>Ingredientes</h3>
-              <p>{produto.ingredientes}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Origem</h3>
-              <p>{produto.origem}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Torra</h3>
-              <p>{produto.torra }</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Notas Sensoriais</h3>
-              <p>{produto.notas}</p>
-            </div>
-          </>
-        )}
-
-        {/* acessorios */}
-
-        {produto.categoria === "acessorio" && (
-          <>
-            <div className="info-card">
-              <h3>Material</h3>
-              <p>{produto.material}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Fabricante</h3>
-              <p>{produto.fabricante}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Origem</h3>
-              <p>{produto.origem}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Garantia</h3>
-              <p>{produto.garantia}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Limpeza</h3>
-              <p>{produto.limpeza}</p>
-            </div>
-          </>
-        )}
-
-        {/* graos */}
-
-        {produto.categoria === "grao" && (
-          <>
-            <div className="info-card">
-              <h3>Origem</h3>
-              <p>{produto.origem}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Altitude</h3>
-              <p>{produto.altitude}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Torra</h3>
-              <p>{produto.torra}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Variedade</h3>
-              <p>{produto.variedade}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Perfil Sensorial</h3>
-              <p>{produto.perfil}</p>
-            </div>
-
-            <div className="info-card">
-              <h3>Peso</h3>
-              <p>{produto.peso}</p>
-            </div>
-          </>
-        )}
-
-      </section>
-
-      {/* apenas cafes */}
-
-      {produto.categoria === "cafe" && (
-
-        <>
-          <section className="alergicos">
-
-            <h2>
-              Alerta para Alérgicos
-            </h2>
-
-            <p>
-              {produto.alergicos}
-            </p>
-
-          </section>
-
-          <section className="nutricional">
-
-            <h2>
-              Informações Nutricionais
-            </h2>
-
-            <div className="tabela">
-
-              <div>
-                <span>Calorias</span>
-                <strong>220 kcal</strong>
-              </div>
-
-              <div>
-                <span>Carboidratos</span>
-                <strong>24g</strong>
-              </div>
-
-              <div>
-                <span>Proteínas</span>
-                <strong>6g</strong>
-              </div>
-
-              <div>
-                <span>Cafeína</span>
-                <strong>95mg</strong>
-              </div>
-
-            </div>
-
-          </section>
-        </>
-
-      )}
       <BotaoSubir />
       <Footer />
-
     </div>
   );
 }

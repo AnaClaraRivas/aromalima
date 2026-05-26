@@ -51,7 +51,10 @@ export default function NavbarEscura() {
 
       {/* lado direito */}
       <div className="right-side">
-        <ShoppingBag size={22} className="icon-item" />
+        <ShoppingBag 
+        size={22} 
+        className="icon-item"
+        onClick={() => navigate("/carrinho")} />
         <User
           size={22}
           className="icon-item"

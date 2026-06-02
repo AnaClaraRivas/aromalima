@@ -24,7 +24,6 @@ export default function Pagamento() {
 
     const [endereco, setEndereco] = useState("");
 
-    const usuarioId = 1;
 
     const API = "http://localhost/aromalimaback/rotas/carrinho.php";
 
@@ -38,17 +37,66 @@ export default function Pagamento() {
 
     const total = itens.reduce((acc, item) => {
 
-        const preco = Number(item.preco);
+        const preco = Number(
+            String(item.preco)
+                .replace(",", ".")
+        );
 
         return acc + preco * item.quantidade;
 
     }, 0);
 
-    function finalizarCompra() {
+    const usuario = JSON.parse(
+        localStorage.getItem("usuario")
+    );
 
-        navigate("/pagamentofinal");
+    const usuarioId = usuario?.id;
+    console.log("ITENS:", itens);
+    console.log("TOTAL:", total);
 
+    async function finalizarCompra() {
+
+        console.log("TOTAL ENVIADO:", total);
+
+        try {
+
+            const resposta = await fetch(
+                "http://localhost/aromalimaback/rotas/finalizar_pedido.php",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        usuario_id: usuarioId,
+                        total: Number(total),
+                        metodo_pagamento: metodoPagamento,
+                        endereco: endereco
+                    })
+                }
+            );
+
+            const dados = await resposta.json();
+
+            console.log(dados);
+
+            if (dados.status === "ok") {
+
+                navigate("/pagamentofinal");
+
+            } else {
+
+                alert(dados.mensagem);
+
+            }
+
+        } catch (erro) {
+
+            console.log(erro);
+
+        }
     }
+
 
     return (
 

@@ -24,6 +24,8 @@ export default function Perfil() {
 
     const [editando, setEditando] = useState(false);
 
+    const [pedidos, setPedidos] = useState([]);
+
 
 
     useEffect(() => {
@@ -39,6 +41,7 @@ export default function Perfil() {
             setNome(usuarioSalvo.nome);
 
             buscarInscricoes(usuarioSalvo.id);
+            buscarPedidos(usuarioSalvo.id);
 
         }
 
@@ -66,7 +69,25 @@ export default function Perfil() {
         }
     }
 
+    async function buscarPedidos(idUsuario) {
 
+        try {
+
+            const resposta = await fetch(
+                `http://localhost/aromalimaback/rotas/meus_pedidos.php?usuario_id=${idUsuario}`
+            );
+
+            const dados = await resposta.json();
+
+            setPedidos(dados);
+
+        } catch (erro) {
+
+            console.log(erro);
+
+        }
+
+    }
 
 
     async function salvarPerfil() {
@@ -419,7 +440,114 @@ export default function Perfil() {
 
                 </div>
 
+                <div className="minhas-inscricoes">
+
+                    <div className="topo-inscricoes">
+
+                        <h2>Meus Pedidos</h2>
+
+                    </div>
+
+                    {pedidos.length === 0 ? (
+
+                        <p className="sem-inscricao">
+                            Você ainda não realizou nenhum pedido.
+                        </p>
+
+                    ) : (
+
+                        <div className="area-meus-pedidos">
+
+
+                            {pedidos.length === 0 ? (
+
+                                <p className="sem-pedidos-aroma">
+                                    Você ainda não realizou nenhum pedido.
+                                </p>
+
+                            ) : (
+
+                                <div className="lista-pedidos-aroma">
+
+                                    {pedidos.map((pedido) => (
+
+                                        <div
+                                            key={pedido.id}
+                                            className="card-pedido-aroma"
+                                        >
+
+                                            <div className="pedido-info-aroma">
+
+                                                <div>
+                                                    <span className="pedido-label-aroma">
+                                                        Pedido
+                                                    </span>
+
+                                                    <h3>
+                                                        #{pedido.id}
+                                                    </h3>
+                                                </div>
+
+                                                <div>
+                                                    <span className="pedido-label-aroma">
+                                                        Status
+                                                    </span>
+
+                                                    <p className="status-pedido-aroma">
+                                                        {pedido.status}
+                                                    </p>
+                                                </div>
+
+                                                <div>
+                                                    <span className="pedido-label-aroma">
+                                                        Total
+                                                    </span>
+
+                                                    <p>
+                                                        R$ {Number(pedido.total).toFixed(2)}
+                                                    </p>
+                                                </div>
+
+                                                <div>
+                                                    <span className="pedido-label-aroma">
+                                                        Método
+                                                    </span>
+
+                                                    <p>
+                                                        {pedido.metodo_pagamento}
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <div className="pedido-endereco-aroma">
+
+                                                <span className="pedido-label-aroma">
+                                                    Endereço
+                                                </span>
+
+                                                <p>
+                                                    {pedido.endereco}
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    ))}
+
+                                </div>
+
+                            )}
+
+                        </div>
+
+                    )}
+
+                </div>
+
             </div>
+
 
             <Footer />
 

@@ -11,7 +11,13 @@ export default function Carrinho() {
     const [itens, setItens] = useState([]);
     const [carregando, setCarregando] = useState(true);
 
-    const usuarioId = 1;
+    const usuario = JSON.parse(
+        localStorage.getItem("usuario")
+    );
+
+    const usuarioId = usuario?.id;
+    console.log("USUARIO:", usuario);
+    console.log("ID:", usuarioId);
 
     const API = "http://localhost/aromalimaback/rotas/carrinho.php";
 
